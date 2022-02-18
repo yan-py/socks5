@@ -10,7 +10,7 @@ class SocksLib:
     
     def auth(self):
         self.sock.connect(self.server_address)
-        auth_msg = f'{self.socks_ver}\x02\x00\x02'
+        auth_msg = f'{self.socks_ver}\x01\x00'
         self.sock.send(auth_msg.encode())
         answ = self.sock.recv(2)
 
@@ -23,8 +23,7 @@ class SocksLib:
             self.address_type = '\x03' + chr(len(address))
         self.target_port = chr(0)+chr(port)
 
-        request = f'{self.socks_ver}\x01\x00{self.address_type}'.encode()+self.target_addr+self.target_port.encode()
+        request = f'{self.socks_ver}\x01\x00{self.address_type}'.encode() + self.target_addr + self.target_port.encode()
         self.sock.send(request)
         answ = self.sock.recv(128)
-        
         return self.sock
