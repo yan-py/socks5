@@ -6,7 +6,10 @@ socks_lib.py
 test_get.py
     Example use with GET-request
 
+
+
 TODO:
-    + ul correct auth
-    + ul process request errors
-    + ul add other protocol example (socks-over-socks, telnet ...)
+
+    * correct auth
+    * process request errors
+    * add other protocol example (socks-over-socks, telnet ...)
