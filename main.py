@@ -20,7 +20,7 @@ answ = sock.recv(2)
 # request connect
 request = '\x05\x01\x00'.encode()+address_type.encode()+req_addr+'\x00P'.encode()# 80 port
 sock.send(request)
-answ = sock.recv(16)
+answ = sock.recv(128)
 
 # request page
 sock.send(b'GET / HTTP/1.1\r\nHost: '+req_addr+b'\r\n\r\n')
