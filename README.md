@@ -10,6 +10,6 @@ test_get.py
 
 TODO:
 
-    * correct auth
+    + correct auth
     * process request errors
     * add other protocol example (socks-over-socks, telnet ...)
