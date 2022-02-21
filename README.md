@@ -1,9 +1,8 @@
-# Socks5-lib
+# Socks5
 
-socks_lib.py - Socks5 client on python3, return python socket.
+Socks5 client on pure sockets in python3.
 
 test_get.py - Example use with GET-request
-
 
 TODO:
 - process request errors
